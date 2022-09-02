@@ -178,8 +178,8 @@ disableHugoGeneratorInject = false
   [[menu.main]]
     identifier =  "about"
     name       = "About"
-    url        = baseURL + "about/"
+    url        = "https://631243b4402f8a00088a4bf6--adorable-toffee-efc530.netlify.app/about"
   [[menu.main]]
     identifier = "posts"
     name       = "Posts"
-    url        = baseURL + "posts/"
+    url        =  "https://631243b4402f8a00088a4bf6--adorable-toffee-efc530.netlify.app/posts"
