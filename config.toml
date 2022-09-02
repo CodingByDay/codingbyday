@@ -1,4 +1,4 @@
-baseURL = "https://example.com"
+baseURL = "https://631243b4402f8a00088a4bf6--adorable-toffee-efc530.netlify.app"
 title   = "CodingByDay"
 languageCode = "en-us"
 theme = "hello-friend-ng"
@@ -172,9 +172,6 @@ disableHugoGeneratorInject = false
   [[params.social]]
     name = "linkedin"
     url  = "https://www.linkedin.com/"
-
-
-
 
 
 [menu]
