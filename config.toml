@@ -8,8 +8,7 @@ PygmentsStyle = "monokai"
 
 paginate  = 10
 rssLimit  = 10  # Maximum number of items in the RSS feed.
-
-# googleAnalytics = "G-WHBBZ5Y84G"
+googleAnalytics = "G-WHBBZ5Y84G"
 # disqusShortname = ""
 
 archetypeDir = "archetypes"
