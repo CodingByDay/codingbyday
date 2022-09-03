@@ -14,12 +14,13 @@ draft: false
 In this post, I will explain how you can publish an amazing website completely for free using serverless technology called Hugo. 
 Here is the video of me going through it if you are more of a visual learner.
 
+{{< youtube ZDjfoKyV1V4 >}}
 
 So what is Hugo?
 Hugo is the fastest growing serverless tech stack for creating amazing websites, it is written in Go,
 and it makes obvious the fact that for most of the websites you don't actually need SQL and that is a huge blessing if you are concerned about the cost of the hosting services, which can amount to more than we are willing to pay, especially if your website does not have a huge amount of traffic. If you follow this guide you will be able to create a website completely for free and therefore I think this post could be beneficial for you. 
 
-You need to have git installed on your machine for hosting to work, so If you do not have it. Just head over to this URL and download it
+You need to have git installed on your machine for hosting to work, so if you do not have it just head over to this URL and download it
 https://git-scm.com/download/win
 First of all, you need to install Hugo. Hugo is available on all operating systems and depending on the one you are using you will find instructions on how to install it on the Hugos website.
 I will presume that most of you are on Windows and therefore here I will post the code necessary for Windows but once you have Hugo installed the process is the same.
