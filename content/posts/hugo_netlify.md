@@ -49,9 +49,9 @@ cd example
 You will get a message saying that the site has been successfully created, and that is it for the boilerplate site. Now we will initialize a git repository so that we can use it to publish our site.
 
 ``` html
-Git init
-Git add .
-Git commit –m “Initial commit”
+git init
+git add .
+git commit –m “Initial commit”
 ```
 
 After we do this we need to choose a theme for our website because by default Hugo does not come with a theme. You can go to the Hugo website and see all of the available themes there, but I would suggest that you first try „anubis“ and then choose another one, there are almost identical to set up, but if you want to see how it works first then there is nothing wrong with this one.
