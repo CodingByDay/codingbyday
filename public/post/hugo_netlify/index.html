@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Janko Jovičić ">
+<meta name="description" content="The time necessary: An hour!
+In this post, I will explain how you can publish an amazing website completely for free using serverless technology called Hugo. Here is the video of me going through it if you are more of a visual learner.
+So what is Hugo? Hugo is the fastest growing serverless tech stack for creating amazing websites, it is written in Go, and it makes obvious the fact that for most of the websites you don&amp;rsquo;t actually need SQL and that is a huge blessing if you are concerned about the cost of the hosting services, which can amount to more than we are willing to pay, especially if your website does not have a huge amount of traffic." />
+<meta name="keywords" content="Programming, Learning Methods, CodingByDay, Janko Jovičić, University of information Studies, Slovenia" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://codingbyday.net/post/hugo_netlify/" />
+
+
+    <title>
+        
+            Publish a website for free using Hugo and Netlify :: CodingByDay 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://codingbyday.net/main.4e5c639214707eff609bb55fe49e183dee42258a73bc90e4cc7b0a84f900798a.css">
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://codingbyday.net/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://codingbyday.net/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://codingbyday.net/favicon-16x16.png">
+    <link rel="manifest" href="https://codingbyday.net/site.webmanifest">
+    <link rel="mask-icon" href="https://codingbyday.net/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="https://codingbyday.net/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+<meta itemprop="name" content="Publish a website for free using Hugo and Netlify">
+<meta itemprop="description" content="The time necessary: An hour!
+In this post, I will explain how you can publish an amazing website completely for free using serverless technology called Hugo. Here is the video of me going through it if you are more of a visual learner.
+So what is Hugo? Hugo is the fastest growing serverless tech stack for creating amazing websites, it is written in Go, and it makes obvious the fact that for most of the websites you don&rsquo;t actually need SQL and that is a huge blessing if you are concerned about the cost of the hosting services, which can amount to more than we are willing to pay, especially if your website does not have a huge amount of traffic."><meta itemprop="datePublished" content="2022-09-03T15:04:58+02:00" />
+<meta itemprop="dateModified" content="2022-09-03T15:04:58+02:00" />
+<meta itemprop="wordCount" content="1203"><meta itemprop="image" content="https://codingbyday.net/"/>
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://codingbyday.net/"/>
+
+<meta name="twitter:title" content="Publish a website for free using Hugo and Netlify"/>
+<meta name="twitter:description" content="The time necessary: An hour!
+In this post, I will explain how you can publish an amazing website completely for free using serverless technology called Hugo. Here is the video of me going through it if you are more of a visual learner.
+So what is Hugo? Hugo is the fastest growing serverless tech stack for creating amazing websites, it is written in Go, and it makes obvious the fact that for most of the websites you don&rsquo;t actually need SQL and that is a huge blessing if you are concerned about the cost of the hosting services, which can amount to more than we are willing to pay, especially if your website does not have a huge amount of traffic."/>
+
+
+
+    <meta property="og:title" content="Publish a website for free using Hugo and Netlify" />
+<meta property="og:description" content="The time necessary: An hour!
+In this post, I will explain how you can publish an amazing website completely for free using serverless technology called Hugo. Here is the video of me going through it if you are more of a visual learner.
+So what is Hugo? Hugo is the fastest growing serverless tech stack for creating amazing websites, it is written in Go, and it makes obvious the fact that for most of the websites you don&rsquo;t actually need SQL and that is a huge blessing if you are concerned about the cost of the hosting services, which can amount to more than we are willing to pay, especially if your website does not have a huge amount of traffic." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://codingbyday.net/post/hugo_netlify/" /><meta property="og:image" content="https://codingbyday.net/"/><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-09-03T15:04:58+02:00" />
+<meta property="article:modified_time" content="2022-09-03T15:04:58+02:00" />
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2022-09-03 15:04:58 &#43;0200 CEST" />
+
+
+
+
+
+
+
+
+
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WHBBZ5Y84G"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-WHBBZ5Y84G', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://codingbyday.net/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">&gt;</span>
+            <span class="logo__text">$ cd /home/</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://codingbyday.net/about">About</a></li><li><a href="https://codingbyday.net/posts">Posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+                <span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+   3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+   13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+ </svg></span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://codingbyday.net/post/hugo_netlify/">Publish a website for free using Hugo and Netlify</a></h2>
+
+            
+            
+            
+
+            <div class="post-content">
+                <p><strong>The time necessary: An hour!</strong></p>
+<p>In this post, I will explain how you can publish an amazing website completely for free using serverless technology called Hugo. 
+Here is the video of me going through it if you are more of a visual learner.</p>
+<p>So what is Hugo?
+Hugo is the fastest growing serverless tech stack for creating amazing websites, it is written in Go,
+and it makes obvious the fact that for most of the websites you don&rsquo;t actually need SQL and that is a huge blessing if you are concerned about the cost of the hosting services, which can amount to more than we are willing to pay, especially if your website does not have a huge amount of traffic. If you follow this guide you will be able to create a website completely for free and therefore I think this post could be beneficial for you.</p>
+<p>If you want to follow along the link to the GitHub repository will be below. You need to have git installed on your machine for hosting to work, so If you do not have it. Just head over to this URL and download it
+<a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a>
+First of all, you need to install Hugo. Hugo is available on all operating systems and depending on the one you are using you will find instructions on how to install it on the Hugos website.
+I will presume that most of you are on Windows and therefore here I will post the code necessary for Windows but once you have Hugo installed the process is the same.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span># Run Powershell as admin
+</span></span><span style="display:flex;"><span># Copy Paste this
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;))
+</span></span></code></pre></div><p>Now, when the installation is complete you can then run this command inside CMD to install Hugo</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>choco install hugo -confirm
+</span></span></code></pre></div><p>After we install Hugo we are ready to go.
+Create a folder somewhere, this folder will be the home of your project. Open a cmd and navigate to that folder or open git bash with a right click inside of the folder.
+Then we create a new Hugo website by running this command, change the example with the name of your site.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>hugo new site example
+</span></span><span style="display:flex;"><span>cd example
+</span></span></code></pre></div><p>You will get a message saying that the site has been successfully created, and that is it for the boilerplate site. Now we will initialize a git repository so that we can use it to publish our site.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>Git init
+</span></span><span style="display:flex;"><span>Git add .
+</span></span><span style="display:flex;"><span>Git commit –m “Initial commit”
+</span></span></code></pre></div><p>After we do this we need to choose a theme for our website because by default Hugo does not come with a theme. You can go to the Hugo website and see all of the available themes there, but I would suggest that you first try „anubis“ and then choose another one, there are almost identical to set up, but if you want to see how it works first then there is nothing wrong with this one.
+We will add the theme as a submodule to our project. To do this you need to run the next command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>git submodule add https://github.com/mitrichius/hugo-theme-anubis.git themes/anubis
+</span></span></code></pre></div><p>Then we will want to open the folder inside of a text editor, for non C# languages I use Visual Studio Code, and I think you would like it too, but feel free to use whichever one you want.
+Inside of the text editor open the config.toml and it should like like this</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>baseURL = &#39;http://example.org/&#39;
+</span></span><span style="display:flex;"><span>languageCode = &#39;en-us&#39;
+</span></span><span style="display:flex;"><span>title = &#39;My New Hugo Site&#39;
+</span></span></code></pre></div><p>At the end of the file we need to add the next line telling Hugo which theme we want to use</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>baseURL = &#39;http://example.org/&#39;
+</span></span><span style="display:flex;"><span>languageCode = &#39;en-us&#39;
+</span></span><span style="display:flex;"><span>title = &#39;My New Hugo Site&#39;
+</span></span><span style="display:flex;"><span>theme = &#34;anubis&#34;
+</span></span></code></pre></div><p>That&rsquo;s it. We have created Hugo powered website! Congratulations. To see our website inside of the CMD we can run.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>hugo serve
+</span></span></code></pre></div><p>And then in your browser you can navigate to http://localhost:1313/ to see it. Your website should appear there.
+To add a new post to our site we can run the next command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>hugo new post/hello-world.md
+</span></span></code></pre></div><p>A new file will be created inside of content/post called hello-world.md. Since Hugo does not use a database those files are our our posts and so by changing them we make changes to the posts themselves
+The post file should look like this.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>title: &#34;Hello World&#34;
+</span></span><span style="display:flex;"><span>date: 2022-09-03T13:35:37+02:00
+</span></span><span style="display:flex;"><span>draft: true
+</span></span></code></pre></div><p>Change the draft to false and then say something after the  closing „&mdash;„
+Mine looks like this</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title: &#34;Hello World&#34;
+</span></span><span style="display:flex;"><span>date: 2022-09-03T13:35:37+02:00
+</span></span><span style="display:flex;"><span>draft: false
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>**Hello world**
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>This is our first post!
+</span></span></code></pre></div><p>Then after we save the file and had back to http://localhost:1313/ we can see our post there.
+Run this command afterward.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>Hugo -D
+</span></span></code></pre></div><p>This is just a basic blog, you can of course make your site look and function much better by changing the config.toml and finding more information online on how to add pages, change the design add additional javascript, manage subscriptions, and so on, but for now, let us say that we have done all of that and we want to publish the site for free.</p>
+<p><strong>PUBLISHING THE SITE</strong></p>
+<p>In order to publish the site, we need to create a GitHub repository. I believe you know how to do this so once you do create it, copy the link to your repository and come back to the cmd and add it to your project folder.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>git remote add example &lt;<span style="color:#f92672">url</span>&gt;
+</span></span></code></pre></div><p>Now we you add a .gitignore file so that our public folder does not get published to GitHub. From your editor of choice create a new file called .gitignore and add the following line there.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>public/
+</span></span></code></pre></div><p>To publish the project to GitHub  ran the following commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>Git init
+</span></span><span style="display:flex;"><span>Git add .
+</span></span><span style="display:flex;"><span>Git commit –m “First commit”
+</span></span><span style="display:flex;"><span>Git push example
+</span></span><span style="display:flex;"><span>And you are done. The only thing left to be done is to publish the site using Netlify which takes just a few more minutes.
+</span></span><span style="display:flex;"><span>Register an account on Netlify and click on create a new site from an existing project. Choose the GitHub repository and then click publish, and voila, your site is successfully published. If the build fails then you need to add a file to your project folder called netlify.toml. Inside of this file  specify the Hugo version installed on our machine, to find out the version you have type: 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>``` html
+</span></span><span style="display:flex;"><span>Hugo version
+</span></span></code></pre></div><p>Mine is 0.102.3, yours might be different, so change the contents of netlify.toml accordingly.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span> [context.production.environment]
+</span></span><span style="display:flex;"><span>          HUGO_VERSION = &#34;0.102.3&#34;  
+</span></span></code></pre></div><p>Also now that the site is active we need to change the baseURL inside of the config.toml to the address of the Netlify app.
+Change example.com to the address of the app</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>baseURL = &#39;http://example.org/&#39;
+</span></span><span style="display:flex;"><span>languageCode = &#39;en-us&#39;
+</span></span><span style="display:flex;"><span>title = &#39;My New Hugo Site&#39;
+</span></span><span style="display:flex;"><span>theme = &#34;anubis&#34;
+</span></span><span style="display:flex;"><span>And commit the changes again.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>``` html
+</span></span><span style="display:flex;"><span>Git init
+</span></span><span style="display:flex;"><span>Git add .
+</span></span><span style="display:flex;"><span>Git commit –m “second commit”
+</span></span><span style="display:flex;"><span>Git push example
+</span></span></code></pre></div><p>Every time we change the GitHub repository the site will rebuild. So you can then add posts, set up a domain, and customize your site however you want.
+I hope you found this useful. If you need some help you can contact me using the social links at the front page. See you in another post.</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+            
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2022</span>
+            <span><a href="https://codingbyday.net/">Janko Jovičić</a></span>
+            <span></span>
+            <span><a href="https://codingbyday.net/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+            
+        </div>
+    </div>
+    
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span><span>Made with &#10084; by CodingByDay</span>
+        </div>
+    </div>
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="https://codingbyday.net/bundle.min.cf7fb2a9e24608a783e05e4472da2fdf008293289de1ad88d1cba5c143e7e414496dd33b6a228e92f8461ce0c8cbad3c9f9847e73e46dfbce0463393ddd1733a.js" integrity="sha512-z3&#43;yqeJGCKeD4F5Ectov3wCCkyid4a2I0culwUPn5BRJbdM7aiKOkvhGHODIy608n5hH5z5G37zgRjOT3dFzOg=="></script>
+
+
+
+    </body>
+</html>

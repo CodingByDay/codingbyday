@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CodingByDay</title>
+    <link>https://codingbyday.net/</link>
+    <description>Recent content on CodingByDay</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 03 Sep 2022 15:04:58 +0200</lastBuildDate><atom:link href="https://codingbyday.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Publish a website for free using Hugo and Netlify</title>
+      <link>https://codingbyday.net/post/hugo_netlify/</link>
+      <pubDate>Sat, 03 Sep 2022 15:04:58 +0200</pubDate>
+      
+      <guid>https://codingbyday.net/post/hugo_netlify/</guid>
+      <description>The time necessary: An hour!
+In this post, I will explain how you can publish an amazing website completely for free using serverless technology called Hugo. Here is the video of me going through it if you are more of a visual learner.
+So what is Hugo? Hugo is the fastest growing serverless tech stack for creating amazing websites, it is written in Go, and it makes obvious the fact that for most of the websites you don&amp;rsquo;t actually need SQL and that is a huge blessing if you are concerned about the cost of the hosting services, which can amount to more than we are willing to pay, especially if your website does not have a huge amount of traffic.</description>
+    </item>
+    
+    <item>
+      <title>Publish a website for free using Hugo and Netlify</title>
+      <link>https://codingbyday.net/posts/2022/09/publish-a-website-for-free-using-hugo-and-netlify/</link>
+      <pubDate>Sat, 03 Sep 2022 15:04:58 +0200</pubDate>
+      
+      <guid>https://codingbyday.net/posts/2022/09/publish-a-website-for-free-using-hugo-and-netlify/</guid>
+      <description>The time necessary: An hour!
+In this post, I will explain how you can publish an amazing website completely for free using serverless technology called Hugo. Here is the video of me going through it if you are more of a visual learner.
+So what is Hugo? Hugo is the fastest growing serverless tech stack for creating amazing websites, it is written in Go, and it makes obvious the fact that for most of the websites you don&amp;rsquo;t actually need SQL and that is a huge blessing if you are concerned about the cost of the hosting services, which can amount to more than we are willing to pay, especially if your website does not have a huge amount of traffic.</description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://codingbyday.net/post/hello-world/</link>
+      <pubDate>Fri, 02 Sep 2022 19:32:58 +0200</pubDate>
+      
+      <guid>https://codingbyday.net/post/hello-world/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://codingbyday.net/about/</link>
+      <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingbyday.net/about/</guid>
+      <description>I am a software engineer living in Slovenia. I have several years of experience in ASP.NET, SQL, Java, Python, and other programming languages. Most of my work is related to WMS systems and business automation in C#.
+This is my website which will contain day-to-day information about software engineering with useful information about current projects and tips on development aimed to help people improve their understanding of programming as well as personal promotion and business inquiries.</description>
+    </item>
+    
+    <item>
+      <title>Hello world</title>
+      <link>https://codingbyday.net/posts/2022/09/hello-world/</link>
+      <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://codingbyday.net/posts/2022/09/hello-world/</guid>
+      <description>Introduction Hello world</description>
+    </item>
+    
+  </channel>
+</rss>
