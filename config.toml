@@ -1,7 +1,7 @@
 baseURL = "https://codingbyday.net/"
 title   = "CodingByDay"
 languageCode = "en-us"
-theme = "hello-friend-ng"
+theme = "hello"
 
 PygmentsCodeFences = true
 PygmentsStyle = "monokai"
