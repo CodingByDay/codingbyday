@@ -1,5 +1,5 @@
 ---
-title: "How to customize Visual Studio Code to be (more) awesome"
+title: "How to customize Visual Studio Code to be (more) awesome?"
 date: 2022-09-16T11:05:50+02:00
 draft: false
 ---
@@ -11,6 +11,10 @@ draft: false
 
 During my coding career I used my fair share of editors, from Atom and Sublime to some of the Jet Brains products to only Visual Studio Code for all of my non-C # projects.
 It is very important to me to make these tools something that I enjoy using and make them as optimal as they can be. This article will show you how you can tweak VS code so it is a joy to use.
+
+Here is the video of me going through it if you are more of a visual learner.
+
+{{< youtube dcbxYzPzhR0 >}}
 
 **Changing the theme and the font**
 
